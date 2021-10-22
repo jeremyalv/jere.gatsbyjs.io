@@ -20,13 +20,15 @@ const Layout = ({ pageTitle, children }) => {
         }
     `)
 
+    const siteTitleName = data.site.siteMetadata.title
+
 
 
 
     return (
         <div className={container}>
-            <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-            <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+            <title>{pageTitle} | {siteTitleName}</title>
+            <header className={siteTitle}>{siteTitleName}</header>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
