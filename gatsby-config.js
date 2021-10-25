@@ -12,6 +12,9 @@ module.exports = {
         name: "blog",
         path: `${__dirname}/blog`
       }
-    }
+    },
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components'
   ],
 };

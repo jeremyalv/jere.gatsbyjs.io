@@ -1,0 +1,46 @@
+/* Navigation */
+/* Mobile-first design */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+.nav-link-text {
+    display: block;
+    padding: 15px 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+.nav-link-item {
+    order: 2;
+    width: 100vw;
+    text-align: center;
+    display: none;
+    /* padding-right: 2rem; */
+}
+.nav-link-item:active .nav-link-text {
+    background-color: rgba(68, 2, 168, .5);
+    /* background-color: #4402a8; */
+    color: black;
+    text-decoration: underline;
+    transition: background-color 0.5s ease;
+}
+.toggle {
+    order: 1;
+    font-size: 1.2rem;
+}
+.active .nav-link-item {
+    display: block;
+}
+/* Desktop menu */
+
+
+/* .nav-link-text:hover {
+    text-decoration: underline;
+    color: black;
+} */
