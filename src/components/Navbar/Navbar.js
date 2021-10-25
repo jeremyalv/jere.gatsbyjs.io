@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import Logo from './Logo';
 import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // Component Styles
 const Navigation = styled.nav`
+  font-size: 1.2rem;
   height: 10vh;
   display: flex;
-  background-color: #fff;
+  background-color: white;
   position: relative;
   justify-content: space-between;
-  text-transform: uppercase;
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
@@ -18,6 +19,7 @@ const Navigation = styled.nav`
   align-self: center;
 
   @media (max-width: 768px) {
+    border-bottom: none;
     position: sticky;
     height: 8vh;
     top: 0;
@@ -31,9 +33,12 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 10vw;
+  padding: 0 5vw;
 
   @media (max-width: 768px) {
+    position: absolute;
+    top: 0px;
+    right: 12px;
     display: flex;
   }
 `
@@ -49,7 +54,8 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    margin-top: 5vh;
+    padding-top: 5vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 8vh;
@@ -94,7 +100,13 @@ const Navbar = () => {
     
     return (
         <Navigation>
-            <Logo />
+            <Logo>
+                <StaticImage 
+                    alt="Logo" 
+                    src="../../assets/logo_purple.svg" 
+                    height={70}
+                />
+            </Logo>
             <Toggle 
                 navbarOpen={navbarOpen}
                 onClick={() => setNavbarOpen(!navbarOpen)}

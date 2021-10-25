@@ -11,6 +11,7 @@ const IndexPage = () => {
         <StaticImage
           alt="Mountain Image"
           src="../assets/Mountain.jpg"
+          width={400}
         />
       </Layout>
     </main>
