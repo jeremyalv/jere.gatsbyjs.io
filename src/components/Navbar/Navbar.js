@@ -3,6 +3,7 @@ import Logo from './Logo';
 import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Component Styles
 const Navigation = styled.nav`
@@ -12,11 +13,11 @@ const Navigation = styled.nav`
   background-color: white;
   position: relative;
   justify-content: space-between;
-  border-bottom: 2px solid #33333320;
+  align-items: center;
   margin: 0 auto;
-  padding: 0 5vw;
+  padding: 0;
   z-index: 2;
-  align-self: center;
+  // align-self: center;
 
   @media (max-width: 768px) {
     border-bottom: none;
@@ -27,7 +28,7 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
   }
-`
+`;
 
 const Toggle = styled.div`
   display: none;
@@ -41,7 +42,7 @@ const Toggle = styled.div`
     right: 12px;
     display: flex;
   }
-`
+`;
 
 const Navbox = styled.div`
   display: flex;
@@ -52,16 +53,16 @@ const Navbox = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     justify-content: flex-start;
     margin-top: 5vh;
     padding-top: 5vh;
     background-color: #fff;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
-`
+`;
 
 const Hamburger = styled.div`
   background-color: #111;
@@ -93,20 +94,21 @@ const Hamburger = styled.div`
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
   }
-`
+`;
 
 const Navbar = () => {
+    // const { height: windowHeight, width: windowWidth } = useWindowDimensions();
     const [navbarOpen, setNavbarOpen] = useState(false)
-    
+
     return (
         <Navigation>
-            <Logo>
-                <StaticImage 
-                    alt="Logo" 
-                    src="../../assets/logo_purple.svg" 
-                    height={70}
-                />
-            </Logo>
+          <Logo>
+              <StaticImage 
+                  alt="Logo" 
+                  src="../../assets/logo.svg" 
+                  height={70}
+                  />
+              </Logo>
             <Toggle 
                 navbarOpen={navbarOpen}
                 onClick={() => setNavbarOpen(!navbarOpen)}

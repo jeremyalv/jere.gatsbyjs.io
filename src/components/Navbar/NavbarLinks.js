@@ -35,7 +35,6 @@ const NavItem = styled(Link)`
     }
 
     @media (max-width: 768px) {
-        border-bottom: 2px solid #33333320;
         padding: 20px 0;
         font-size: 1.5rem;
         z-index: 6;
