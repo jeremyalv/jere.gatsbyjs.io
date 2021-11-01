@@ -15,6 +15,7 @@ module.exports = {
     },
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-sharp'
   ],
 };
