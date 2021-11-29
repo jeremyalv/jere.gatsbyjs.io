@@ -1,24 +1,21 @@
 import React from 'react'
 import Layout from './layout';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Image, Name, WelcomeMessage } from '../components/styles/Home.style';
+import { Image, Name, RegularMessage, WelcomeMessage } from '../components/styles/Home.style';
 
 
 const IndexPage = () => {
   return (
     <main>
-        <Layout pageTitle="Home">
+        <Layout pageTitle="">
         <WelcomeMessage>
           Hi! I'm <Name>Jeremy</Name>
         </WelcomeMessage>
 
-        {/* <Image>
-          <StaticImage
-            alt="Mountain Image"
-            src="../assets/Mountain.jpg"
-            width={400}
-          />
-        </Image> */}
+        <RegularMessage>
+          I do code for fun.
+        </RegularMessage>
+
       </Layout>
     </main>
   ) 

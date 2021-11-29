@@ -1,8 +1,35 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-const NavItem = styled(Link)`
+export const Container = styled.div` 
+    border: 2px solid rgba(211, 211, 211, 1);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 70%;
+    margin: 1rem;
+
+    @media (max-width: 768px) {
+        width: 70%;
+        font-size: 1rem;
+    }
+`;
+
+
+export const TitleBox = styled.div` 
+    font-size: 2rem;
+    color: #4402A8;
+    margin: 4px;
+`;
+
+
+export const DescriptionBox = styled.div`
+    /* border: 1px solid rgba(211, 211, 211, 0.7);
+    border-radius: 1rem; */
+    padding: 0.5rem;
+    width: 70%;
+`;
+
+export const CardLink = styled(Link)`
     text-decoration: none;
     color: #000;
     margin: 0px 1rem;
@@ -44,15 +71,3 @@ const NavItem = styled(Link)`
         z-index: 6;
     }
 `;
-
-const NavbarLinks = () => {
-    return (
-        <>
-            <NavItem to='/'>Home</NavItem>
-            <NavItem to='/about'>About</NavItem>
-            <NavItem to='/blog'>Blog</NavItem>
-        </>
-    )
-};
-
-export default NavbarLinks;

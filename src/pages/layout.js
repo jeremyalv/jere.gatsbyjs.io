@@ -16,9 +16,6 @@ const Layout = ({ pageTitle, children }) => {
             {/* Page body */}
             <PageBodyContainer>
                 <main>
-                    <BlogTitle>
-                        {pageTitle}
-                    </BlogTitle>
                     {children}
                 </main>
             </PageBodyContainer>

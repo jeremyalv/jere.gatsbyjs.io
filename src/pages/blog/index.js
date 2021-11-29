@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../layout';
 import { graphql, Link } from 'gatsby';
+import Card from '../../components/Card';
 
 const BlogPage = ({ data }) => {
     console.log(data.allMdx.nodes);
@@ -15,11 +16,13 @@ const BlogPage = ({ data }) => {
 
 
                         return (
-                            <article key={nodeId}>
-                            <Link to={`/blog/${slug}`}>
-                                {title}
-                            </Link>
-                            </article>
+                            <Card
+                                key={nodeId}
+                                title={title}
+                                slug={slug}
+                                description={'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.'}>
+
+                            </Card>
                         );
                     }
                 )
