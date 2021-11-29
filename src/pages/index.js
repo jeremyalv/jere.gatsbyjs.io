@@ -1,19 +1,24 @@
 import React from 'react'
 import Layout from './layout';
-import { title, image } from '../components/home.module.css'
 import { StaticImage } from 'gatsby-plugin-image';
+import { Image, Name, WelcomeMessage } from '../components/styles/Home.style';
+
 
 const IndexPage = () => {
   return (
     <main>
-      <Layout className={title} pageTitle="Home">
-        <p>I'm making this blog through the Gatsby tutorial</p>
-        <StaticImage
-          className={image}
-          alt="Mountain Image"
-          src="../assets/Mountain.jpg"
-          width={400}
-        />
+        <Layout pageTitle="Home">
+        <WelcomeMessage>
+          Hi! I'm <Name>Jeremy</Name>
+        </WelcomeMessage>
+
+        {/* <Image>
+          <StaticImage
+            alt="Mountain Image"
+            src="../assets/Mountain.jpg"
+            width={400}
+          />
+        </Image> */}
       </Layout>
     </main>
   ) 

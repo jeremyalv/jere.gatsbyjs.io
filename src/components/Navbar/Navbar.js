@@ -3,7 +3,6 @@ import Logo from './Logo';
 import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // Component Styles
 const Navigation = styled.nav`

@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const LogoWrap = styled.div`
     margin: auto 0;
     flex: 0 1 36px;
-    height: 100%
+    height: 100%;
 
     @media (max-width: 768px) and (orientation: landscape) {
         flex: 0 1 24px;    
