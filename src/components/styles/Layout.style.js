@@ -6,6 +6,7 @@ export const Container = styled.div`
     min-height: 600px;
     max-width: 1000px;
     font-family: sans-serif;
+    margin-top: 1rem;
 `;
 export const BlogTitle = styled.span` 
     font-size: 2rem;
