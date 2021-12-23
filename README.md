@@ -12,4 +12,4 @@
 ## Why I made the blog
 <p> It's a fun way to develop my skills through hands-on practice!
   
-Curious about the blog? Click [here](https://jere.gatsbyjs.io/)
+Curious about the blog? Click [here](#)
